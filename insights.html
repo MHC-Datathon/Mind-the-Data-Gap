@@ -14,40 +14,96 @@
   <header>
     <h1>MHC X MTA Datathon - Mind the Data Gap 👩🏽‍💻🚍🌉</h1>
     <nav>
-      <a href="home.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="analysis.html">Analysis</a>
       <a href="insights.html">Insights</a>
     </nav>
   </header>
    
-  
+
     <section>
-    <h2>Issue 1:</h2>
-    <p><strong>Context:</strong>Streets like Amsterdam Ave and 3rd Ave harbor emergency facilities that use bus lanes often, causing many “Exempt – Emergency Vehicle” flags that skew enforcement data.</p>
-    <p><strong>Proposed Solution:</strong></p>
-    <p><strong>Next Steps:</strong></p>
+    <div class="issue">
+    <h2>Issue 1: Emergency Vehicle Exceptions </h2>
+    <p><strong>Context:</strong>
+      Streets like Amsterdam Ave and 3rd Ave host many emergency facilities whose 
+      vehicles frequently use and occasionally commit violations on the bus lanes. Although 
+      these vehicles are exempt, each violation detected by an ACE camera is logged on the database, 
+      adding unnecessary rows to the ACE dataset and obscuring true violation patterns.</p>
+    <h2>Proposed Solution:</h2>
     <ul>
-      <li>Step 1: </li>
-      <li>Step 2: </li>
-      <li>Step 3: </li>
+      <li>Set 100–200 ft buffer zones around emergency facilities. ACE camera
+          captures within these zones are automatically classified as “Emergency Exempt” 
+          and don’t add unnecessary rows to the main dataset.</li>
+      <li>Shift or re-aim ACE cameras away from emergency facility entrances to 
+          cut down unavoidable exemptions</li>
+      <li>Group multiple detections of the same vehicle at the same 
+          location within a short time window into a single event. Example: 
+          A fire truck captured four times in 10 minutes is counted as 
+          one or two events instead of four.</li>
+   <p><strong>Next Steps:</strong></p>                      
+    <ul>
+      <li><strong>Step 1:</strong> Identify all firehouses, hospitals, 
+      and police stations along the M101 route.</li>
+      <li><strong>Step 2:</strong> Create 100–200 ft buffer zones around these 
+      facilities to auto-classify captures as exempt. </li>
+      <li><strong>Step 3:</strong> Group multiple detections of the same vehicle at the same location within a short time window. </li>
+      <li><strong>Step 4:</strong> Test the system at busy sites to ensure it reduces duplicates and improves data accuracy.</li>
+      <li><strong>Step 5:</strong> If the pilot is successful, expand the system across all ACE cameras along the M101 
+        and other relevant routes to standardize exemption handling and improve dataset quality.</li>
     </ul>
-    <p><strong>Benefits:</strong> </p>
+    <h4>Effectiveness:These solutions are effective because they clean the dataset by removing duplicates and exempt vehicles, 
+      focus enforcement on real violations, and reduce manual work, allowing agencies to target problem areas more accurately 
+      and efficiently. This way we can bring the exempt count on repeat emergency vehicles down.</h4>
+    </div>
   </section>
+
 
   <section>
-    <h2>Issue 2: </h2>
-    <p><strong>Context:</strong> </p>
-    <p><strong>Proposed Solution:</strong> </p>
-    <p><strong>Next Steps:</strong></p>
+    <div class="issue">
+    <h2>Issue 2: Commerical Vehicle Exceptions</h2>
+    <p><strong>Context: </strong>Right after exempt emergency vehicles, commercial vehicles 
+      make up the next largest share, receiving exemptions because they did not occupy 
+      the bus lane for over 20 minutes. While not as high as emergency vehicles, 33.06% 
+      is still a significant portion. Since these vehicles are often exempt, many continue 
+      to violate bus lane rules without facing real consequences. Commercial vehicles 
+      shouldn’t receive a free pass simply because they are registered as “exempt,” 
+      especially when they repeatedly misuse bus lanes or restricted areas.</p>
+    <h2>Proposed Solution:</h2>
     <ul>
-      <li>Step 1: </li>
-      <li>Step 2: </li>
-    </ul>
-    <p><strong>Benefits:</strong> </p>
-  </section>
+      <li>Limit the number of exemptions per commercial vehicle to 3 per month. 
+          After that, any further violations are treated as issued violations.</li>
+      <li>For commercial vehicles with more than 3 exemptions in a month, 
+          require a review process where the vehicle owner must provide justification 
+          for continued exemptions. If no valid reason is provided, subsequent violations 
+          are treated as issued violations.</li>
+      <li>Install additional signage along the M101 route reminding commercial drivers 
+          of the exemption limit and consequences of exceeding it.</li>
+      <li>Use license plate recognition technology to automatically track and flag 
+          commercial vehicles that exceed the exemption limit.</li>
+      <li>Allow commercial vehicles exemptions only during off-peak hours for 
+        loading/unloading. During peak transit hours, ACE cameras would count 
+        their violations for half. So instead of 20 minutes, they would be punished if occupying bus lanes for more than 10 minutes.
+      </li>
+      <li>The city can create even more legal loading/unloading areas near congested corridors so commercial
+        vehicles don’t need to block bus lanes.</li>
+  
+    <p><strong>Next Steps:</strong></p>
+<ul>
+  <li><strong>Step 1:</strong> Pilot the exemption limit policy on the M101 route to test its effectiveness before expanding citywide.</li>
+  <li><strong>Step 2:</strong> Collaborate with DOT and NYPD to implement license plate recognition tracking for commercial vehicles.</li>
+  <li><strong>Step 3:</strong> Work with local businesses to identify priority loading/unloading zones and create more legal areas to reduce bus lane misuse.</li>
+  <li><strong>Step 4:</strong> Launch an outreach campaign to inform commercial drivers about the new exemption rules and signage changes.</li>
+  <li><strong>Step 5:</strong> Evaluate the data after 6 months and adjust the policy based on violation trends and feedback from businesses.</li>
+</ul>
 
-  <!-- Repeat as needed for more issues -->
+    <h4>Effectiveness:These solutions are effective because they create clear limits and consequences for commercial vehicles, 
+      reducing repeat violations. By tracking exemptions and requiring justification, the policy encourages responsible behavior. 
+      Additional signage and legal loading zones help drivers comply, while technology aids enforcement. Overall, these measures 
+      target the root causes of commercial vehicle violations, improving bus lane access and transit efficiency.</h4>
+  </section>
+  </div>
+
 
 </body>
 </html>

@@ -11,17 +11,15 @@ body {
   background: #f9f9f9;
   color: #333;
 }
-
 header {
   background: #0039A6;
   color: white;
   padding: 1rem;
 }
-
 header h1 {
   margin: 0;
 }
-
+/* Navigation Bar Styles */
 nav {
   display: flex;         
   justify-content: flex-end; 
@@ -40,7 +38,7 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-
+/* Main Content Styles */
 main {
   padding: 2rem;
 }
@@ -55,7 +53,7 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
-
+/* Button Styles */
 .button {
   background: #0039A6;
   color: white;
@@ -63,7 +61,7 @@ footer {
   text-decoration: none;
   border-radius: 5px;
 }
-
+/* Graph Section Styles */
 .graph {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +76,7 @@ h3{
     color: black;
     text-align: center;
 }
-
+/* Presentation Section Styles */
 .Presentation{
   display: flex;
   flex-wrap: wrap;
@@ -91,7 +89,7 @@ h3{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
+/* Issue Section Styles */
 #button .button {
   padding-top: 10px;
   padding-bottom: 15px;
@@ -100,4 +98,33 @@ h3{
   background-color: #0039A6;
   color: white;
   border-radius: 5px;
+}
+
+.issue {
+  border: 2px solid #0039A6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 23px;
+  margin-bottom: 20px;
+  background-color: #749ad2;
+}
+
+ .issue { 
+  border: 2px solid #0039A6;
+  border-radius: 10px; 
+  padding:20px; 
+  margin-top: 23px;
+  margin-bottom: 20px;
+  background-color: #e6f0ff; }
+
+/* Video Section Styles */
+.video-container {
+  margin: 10px auto;    
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  gap: 20px;
+  text-align: center;
+  padding: 10px 20px;  
 }
